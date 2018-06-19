@@ -1,0 +1,221 @@
+@charset "gb2312";
+.l_box {
+    width: 30%;
+    float: left
+}
+
+.l_box h2 {
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background: #fff
+}
+
+.l_box div {
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+    overflow: hidden
+}
+
+.l_box div ul {
+    padding: 10px;
+    overflow: hidden
+}
+
+.about_me img {
+    width: 100%
+}
+
+.about_me p {
+    line-height: 24px;
+    font-size: 14px
+}
+
+.about_me i {
+    width: 120px;
+    float: left;
+    clear: left;
+    margin-right: 10px;
+    height: 90px;
+    overflow: hidden
+}
+
+.category li {
+    margin-bottom: 10px;
+    margin-left: 10px
+}
+
+.links a {
+    display: block;
+    float: left;
+    margin: 0 10px 5px 0
+}
+
+.r_box {
+    width: 68%;
+    float: right
+}
+
+.r_box li {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    overflow: hidden;
+    color: #797b7c;
+    margin-bottom: 15px
+}
+
+.r_box li h3 {
+    font-size: 16px;
+    line-height: 25px;
+    text-shadow: #FFF 1px 1px 1px
+}
+
+.r_box li h3 a {
+    color: #222
+}
+
+.r_box li h3 a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.r_box li img {
+    float: right;
+    clear: right;
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.r_box li i {
+    width: 150px;
+    display: block;
+    max-height: 100px;
+    overflow: hidden;
+    float: right;
+    margin-left: 20px
+}
+
+.r_box li p {
+    margin: 10px 0 0 0;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+}
+
+.r_box li:hover img {
+    transform: scale(1.05)
+}
+
+.r_box li:hover h3 a {
+    color: #C93282;
+}
+
+.page_list {
+    text-align: center;
+    color: #666;
+    width: 100%;
+    clear: both;
+    margin: 20px 0;
+    padding-top: 20px
+}
+
+.page_list a {
+    color: #666;
+    margin: 0 2px;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    background: #FFF
+}
+
+.page_list a:hover {
+    color: #C93282;
+}
+
+.page_list b {
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+a.curPage {
+    color: #C93282;
+    font-weight: bold;
+}
+
+/*about*/
+.about {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.about img {
+    max-width: 500px;
+    margin: 20px 0;
+    width: 100%
+}
+
+.cloud ul a {
+    line-height: 24px;
+    height: 24px;
+    display: block;
+    background: #999;
+    float: left;
+    padding: 3px 11px;
+    margin: 10px 10px 0 0;
+    border-radius: 8px;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #FFF
+}
+
+.cloud ul a:nth-child(8n-7) {
+    background: #8A9B0F
+}
+
+.cloud ul a:nth-child(8n-6) {
+    background: #EB6841
+}
+
+.cloud ul a:nth-child(8n-5) {
+    background: #3FB8AF
+}
+
+.cloud ul a:nth-child(8n-4) {
+    background: #FE4365
+}
+
+.cloud ul a:nth-child(8n-3) {
+    background: #FC9D9A
+}
+
+.cloud ul a:nth-child(8n-2) {
+    background: #EDC951
+}
+
+.cloud ul a:nth-child(8n-1) {
+    background: #C8C8A9
+}
+
+.cloud ul a:nth-child(8n) {
+    background: #83AF9B
+}
+
+.cloud ul a:first-child {
+    background: #036564
+}
+
+.cloud ul a:last-child {
+    background: #3299BB
+}
+
+.cloud ul a:hover {
+    border-radius: 0;
+    text-shadow: #000 1px 1px 1px
+}
