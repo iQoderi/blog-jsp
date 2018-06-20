@@ -15,7 +15,7 @@ public class BackstageServlet extends HttpServlet {
             req.getRequestDispatcher("backstage.jsp").forward(req, resp);
         } else {
             req.setAttribute("flag", true);
-            req.getRequestDispatcher("admin.jsp").forward(req, resp);
+            req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
     }
 }

@@ -1,4 +1,7 @@
+<%@ page import="java.util.List,org.seven.vo.Blog" %>
 <%@ page language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -15,16 +18,9 @@
 </head>
 <body class="body">
 <header>
+    <%@include file="top_menu.jsp"%>
     <div class="logo">Blog</div>
-    <nav id="nav">
-        <ul>
-            <li><a href="index.jsp">网站首页</a></li>
-            <li><a href="list.html">我的日记</a></li>
-            <li><a href="about.html">关于我</a></li>
-            <li><a href="gbook.html">留言</a></li>
-            <li><a href="infopic.html">内容页</a></li>
-        </ul>
-    </nav>
+    <%@ include file="nav.jsp" %>
     <script>
         window.onload = function () {
             var obj = null;
@@ -40,92 +36,25 @@
 </header>
 
 <article>
-    <div class="l_box">
-        <div class="about_me">
-            <h2>关于我</h2>
-            <ul>
-                <i><img src="images/avatar.jpg"></i>
-                <p><b>Catango</b>，喵喵喵喵喵喵喵喵喵喵喵喵</p>
-            </ul>
-        </div>
-        <div class="category">
-            <h2>文章分类</h2>
-            <ul>
-                <li><a href="/">学无止境（33）</a></li>
-                <li><a href="/">日记（19）</a></li>
-                <li><a href="/">慢生活（520）</a></li>
-                <li><a href="/">美文欣赏（40）</a></li>
-            </ul>
-        </div>
-        <div class="links">
-            <h2>友情链接</h2>
-            <ul>
-                <a href="http://www.marklux.cn">MarkLux</a>
-            </ul>
-        </div>
-    </div>
+    <%@ include file="side_menu.jsp" %>
+    <% List list  = (List)request.getAttribute("list");
+    %>
 
     <div class="r_box">
-        <li><i><a href="/"></a></i>
-            <h3><a href="/">我是伟大的奥特曼喵喵喵</a></h3>
-            <a>分类:</a> <a href="/">技术</a>
-            <p>今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊。</p>
-        </li>
-        <li><i><a href="/"></a></i>
-            <h3><a href="/">我是伟大的奥特曼喵喵喵</a></h3>
-            <a>分类:</a> <a href="/">技术</a>
-            <p>今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊。</p>
-        </li>
-        <li><i><a href="/"></a></i>
-            <h3><a href="/">我是伟大的奥特曼喵喵喵</a></h3>
-            <a>分类:</a> <a href="/">技术</a>
-            <p>今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊。</p>
-        </li>
-        <li><i><a href="/"></a></i>
-            <h3><a href="/">我是伟大的奥特曼喵喵喵</a></h3>
-            <a>分类:</a> <a href="/">技术</a>
-            <p>今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊。</p>
-        </li>
-        <li><i><a href="/"></a></i>
-            <h3><a href="/">我是伟大的奥特曼喵喵喵</a></h3>
-            <a>分类:</a> <a href="/">技术</a>
-            <p>今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊。</p>
-        </li>
-        <li><i><a href="/"></a></i>
-            <h3><a href="/">我是伟大的奥特曼喵喵喵</a></h3>
-            <a>分类:</a> <a href="/">技术</a>
-            <p>今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊今天是个好日子啊好日子啊好日子啊好日啊。</p>
-        </li>
-
-        <div class="page_list"><a class="allpage"><b>99</b>
-        </a>
-            &nbsp;&nbsp;
-            <a href="#" class="curPage">1</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(2)">2</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(3)">3</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(4)">4</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(5)">5</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(6)">6</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(7)">7</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(8)">8</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(9)">9</a>
-            &nbsp;&nbsp;
-            <a href="#" onclick="page(2)">下一页</a>
-        </div>
+        <pg:pager maxPageItems="2" url="index.jsp">
+            <ul>
+                <c:forEach items="${list}" var="blog" >
+                    <li><i><a href="/"></a></i>
+                        <h3><a href="FindBlogServlet?id=${blog.getId()}">${blog.getTitle()}</a></h3>
+                        <a>分类:</a> <a href="/">${blog.getType()}</a>
+                        <p>${blog.getContent()}</p>
+                    </li>
+                </c:forEach>
+            </ul>
+            <pg:pager>
     </div>
 </article>
-<footer>
-    <p>Design by <a href="www.catango.cn" target="_blank">Catango</a></p>
-</footer>
-
+<%@ include file="footer.jsp" %>
 </body>
 
 </html>

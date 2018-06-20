@@ -13,7 +13,7 @@ public class UserTest {
         User user =new User();
         user.setName("name--");
         user.setPassword("password-----");
-        UserDao dao = new UserDao();
-        dao.saveUser(user);
+//        UserDao dao = new UserDao();
+//        dao.saveUser(user);
     }
 }

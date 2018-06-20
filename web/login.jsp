@@ -1,0 +1,65 @@
+<%@ page language="java" pageEncoding="UTF-8" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+
+<html>
+<head>
+    <meta charset="gbk">
+    <title>Catango</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/m.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/modernizr.js"></script>
+</head>
+<body class="body">
+<header>
+    <div class="logo">Blog</div>
+    <%@ include file="nav.jsp" %>
+    <script>
+        window.onload = function () {
+            var obj = null;
+            var As = document.getElementById('nav').getElementsByTagName('a');
+            obj = As[0];
+            for (i = 1; i < As.length; i++) {
+                if (window.location.href.indexOf(As[i].href) >= 0)
+                    obj = As[i];
+            }
+            obj.id = 'selected'
+        }
+    </script>
+</header>
+
+<article>
+    <%@ include file="side_menu.jsp" %>
+    <div class="r_box">
+        <form action="LoginServlet" method="post" class="form">
+            <div class="form-group">
+                <label class="white" for="exampleFormControlInput1">用户名</label>
+                <input name="username" type="text" class="form-control" id="exampleFormControlInput1" placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label class="white" for="exampleFormControlInput1">密码</label>
+                <input name="password" type="password" class="form-control" id="exampleFormControlInput2" placeholder="请输入用户密码">
+            </div>
+            <div class="form-group">
+                <label class="white" for="exampleFormControlSelect1">类型</label>
+                <select name="type" class="form-control" id="exampleFormControlSelect1">
+                    <option value="1">普通用户</option>
+                    <option value="2">管理员</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">登录</button>
+            <a class="blue" href="forget.jsp" >忘记密码</a>
+            <a class="blue" href="register.jsp" style="margin-left: 10px" >我要注册</a>
+        </form>
+    </div>
+</article>
+<%@ include file="footer.jsp" %>
+
+</body>
+
+</html>

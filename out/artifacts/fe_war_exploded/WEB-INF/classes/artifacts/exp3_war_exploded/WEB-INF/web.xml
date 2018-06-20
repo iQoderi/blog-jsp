@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+
+         xmlns="http://java.sun.com/xml/ns/javaee"
+
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>org.seven.web.IndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>add</servlet-name>
+        <servlet-class>org.seven.web.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>add</servlet-name>
+        <url-pattern>/add.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListServlet</servlet-name>
+        <servlet-class>org.seven.web.ListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListServlet</servlet-name>
+        <url-pattern>/list.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>org.seven.web.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>org.seven.web.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/update.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ToupdateServlet</servlet-name>
+        <servlet-class>org.seven.web.ToupdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToupdateServlet</servlet-name>
+        <url-pattern>/toupdate.do</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>org.seven.web.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>BackstageServlet</servlet-name>
+        <servlet-class>org.seven.web.BackstageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BackstageServlet</servlet-name>
+        <url-pattern>/backstage</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ArticleServlet</servlet-name>
+        <servlet-class>org.seven.web.ArticleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ArticleServlet</servlet-name>
+        <url-pattern>/article</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddArticleServlet</servlet-name>
+        <servlet-class>org.seven.web.AddArticleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddArticleServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+</web-app>

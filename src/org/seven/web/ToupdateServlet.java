@@ -18,15 +18,15 @@ public class ToupdateServlet extends HttpServlet {
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		UserDao dao = new UserDao();
+//		UserDao dao = new UserDao();
 		String sid = request.getParameter("id").trim();
 		int id = 0;
 		if(sid!=null){
 			id = Integer.parseInt(sid);
 		}
-		User user = dao.getUser(id);
-		request.setAttribute("user", user);
-		request.getRequestDispatcher("update.jsp").forward(request, response);
+//		User user = dao.getUser(id);
+//		request.setAttribute("user", user);
+//		request.getRequestDispatcher("update.jsp").forward(request, response);
 	}
 
 }

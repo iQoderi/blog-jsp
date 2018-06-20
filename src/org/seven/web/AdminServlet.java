@@ -14,7 +14,7 @@ public class AdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("flag", false);
-        req.getRequestDispatcher("admin.jsp").forward(req, resp);
+        req.setAttribute("flag", true);
+        req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 }
